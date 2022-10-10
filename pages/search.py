@@ -31,14 +31,15 @@ class DuckDuckGoSearchPage:
     # driver sometimes open incognito/normal page of duckduckgo
     # if the normal page loads, have to wait for 10 seconds
     try:
-      search_intput = self.browser.find_element(*self.INCOGNITO_SEARCH_INPUT)
+      search_input = self.browser.find_element(*self.INCOGNITO_SEARCH_INPUT)
     except NoSuchElementException:
       search_input = self.browser.find_element(*self.SEARCH_INPUT)
+    # search_input = self.browser.find_element(*self.SEARCH_INPUT)
 
     # this does not work
     # search_intput =self.browser.find_element(*self.SEARCH_INPUT) or self.browser.find_element(*self.INCOGNITO_SEARCH_INPUT)
 
     # sends texts and return button to load search results page
-    search_intput.send_keys(phrase + Keys.RETURN)
+    search_input.send_keys(phrase + Keys.RETURN)
     # hmmm what is this???
     # search_intput.send_keys(phrase + KeysView.RETURN)

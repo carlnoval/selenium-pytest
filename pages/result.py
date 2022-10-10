@@ -30,3 +30,4 @@ class DuckDuckGoResultPage:
 
   def title(self):
     return self.browser.title
+    # return "panda - here there eveywhere"
