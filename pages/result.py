@@ -15,14 +15,19 @@ class DuckDuckGoResultPage:
   def __init__(self, browser):
     self.browser = browser
 
+  # returns a list/array of all link titles
   def result_link_titles(self):
-    # TODO
-    return []
+    links_titles = self.browser.locate_elements(*self.RESULT_LINKS)
+    # returns array of strings from link titles
+    titles = [link.text for link in links_titles]
+    return titles
   
   def search_input_value(self):
-    # TODO
-    return ""
+    search_input = self.browser.findelement(self.SEARCH_INPUT)
+    # for input elements .text() is always going to give an empty string
+    search_keyword = search_input.get_attribute('value')
+    search_keyword = search_input.text
+    return search_keyword
 
   def title(self):
-    # TODO
-    return ""
+    return self.browser.title
