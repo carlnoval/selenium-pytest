@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 class DuckDuckGoSearchPage:
 
-  URL = 'htts://www.duckduckgo.com'
+  URL = "https://www.duckduckgo.com"
 
   # search input locator as tuple class variables since only one immutable varaibale is needed
   SEARCH_INPUT = (By.ID, "search_form_input_homepage")
@@ -25,8 +25,7 @@ class DuckDuckGoSearchPage:
 
   # 
   def search(self, phrase):
-    # webdriver locates the element using the class variable tuple
-    # find_element takes in two arguments(By tag/attribute and value)
+    # passing class variable tuple as *args for find_element
     search_intput = self.browser.find_element(*self.SEARCH_INPUT)
     # sends texts and return button to load search results page
     search_intput.send_keys(phrase + Keys.RETURN)

@@ -28,7 +28,3 @@ def test_basic_duckduckgo_search(browser):
   titles = result_page.result_link_titles()
   matches = [t for t in titles if PHRASE.lower() in t.lower()]
   assert len(matches) > 0
-
-  # TODO: Remove this exception once the test is complete
-  # Test is not complete yet since page objects are still not done
-  raise Exception("Incomplete Test")
