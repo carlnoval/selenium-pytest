@@ -34,7 +34,6 @@ class DuckDuckGoSearchPage:
       search_input = self.browser.find_element(*self.INCOGNITO_SEARCH_INPUT)
     except NoSuchElementException:
       search_input = self.browser.find_element(*self.SEARCH_INPUT)
-    # search_input = self.browser.find_element(*self.SEARCH_INPUT)
 
     # this does not work
     # search_intput =self.browser.find_element(*self.SEARCH_INPUT) or self.browser.find_element(*self.INCOGNITO_SEARCH_INPUT)
