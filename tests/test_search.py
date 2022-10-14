@@ -8,6 +8,7 @@ from pages.search import DuckDuckGoSearchPage
 
 # run test 3 times, phrase argument will run each element in the list/array
 @pytest.mark.parametrize("phrase", ["panda", "python", "polar bear"])
+# @pytest.mark.parametrize("phrase", ["panda"])
 def test_basic_duckduckgo_search(browser, phrase):
     # webdriverr used to construct page object instances
     search_page = DuckDuckGoSearchPage(browser)
