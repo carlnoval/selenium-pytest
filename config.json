@@ -1,4 +1,4 @@
 {
   "browser": "Firefox",
-  "implicit_wait": 10
+  "implicit_wait": 5
 }
